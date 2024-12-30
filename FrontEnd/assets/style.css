@@ -2,6 +2,10 @@
    v2.0 | 20110126
    License: none (public domain)
 */
+html{
+	scroll-behavior: smooth;
+}
+
 
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -75,7 +79,6 @@ h1 > span {
 	font-family: 'Work Sans';
 	font-size:10px;
 	letter-spacing: 0.1em;
-;
 }
 
 h2{
@@ -84,11 +87,16 @@ h2{
 	font-size: 30px;
 	color: #1D6154
 }
+
+a{
+	text-decoration: none;
+}
+
 nav ul {
 	display: flex;
 	align-items: center;
 	list-style-type: none;
-
+	
 }
 nav li {
 	padding: 0 10px;
@@ -185,4 +193,6 @@ footer nav ul {
 	justify-content: flex-end;
 	margin: 2em
 }
+
+
 
