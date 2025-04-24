@@ -1,0 +1,190 @@
+.overlay{
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.3);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+}
+
+.modal{
+    flex-direction: column;
+    align-items: center;
+    z-index: 20;
+    position: fixed;
+    background-color: white;
+    border-radius: 10px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    max-width: 630px;
+    max-height: 688px;
+    width: 100%;
+    height: 100%;
+}
+
+.modal__header{
+    display: flex;
+    gap: 546px;
+}
+
+.modal__header button{
+    padding: 8px;
+}
+
+.fleche img, .quitter img{
+    width: 24px;
+    height: 24px;
+}
+
+.modal__content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+
+.galerie__container{
+    margin-top: 136px;
+    margin-left: 105px;
+}
+
+
+
+/* .layout{
+    width: 100%;
+    background-color: #0000004D
+} */
+
+.fleche{
+    text-align: left;
+    width: 100%;
+}
+
+.quitter{
+    text-align: right;
+    width: 100%;
+    margin-right: 10px;
+}
+
+.galerie__container{
+    min-height: 300px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 16px;
+}
+
+.galerie__container figure{
+    width: 78px;
+    height: 105px;
+}
+
+.galerie__container img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.addphoto__formulaire{
+    padding-left: 85px;
+    padding-right: 85px;
+    display: none;
+}
+
+.titre{
+    text-align: center;
+}
+
+.add-pic{
+    width: 420px;
+    height: 169px;
+    background-color: #E8F1F6;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 13px;
+    padding-bottom: 19px;
+    margin-top: 36px;
+    margin-bottom: 56px;
+    /*gap: 7px;*/
+    border-radius: 3px;
+}
+
+.add-pic p{
+    font-family: Work Sans;
+    font-size: 10px;
+    font-weight: 400;
+}
+
+.add-pic button{
+    background: #CBD6DC;
+    border: none;
+    color:#306685;
+    width: 173px;
+    height: 36px;
+    font-weight: 500;
+    font-size: 14px;
+}
+
+.add-pic button:hover{
+    background: #1D6154;
+    color: #FFFFFF;
+    transition: 200ms;
+}
+
+.categorie{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 47px;
+}
+
+.categorie input{
+    width: 420px;
+    height: 51px;
+}
+
+.categorie select{
+    width: 430px;
+    height: 51px;
+}
+
+
+.categorie button{
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+.modal__action{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+
+.modal__action button{
+    width: 237px;
+    height: 36px;
+    border-radius: 60px;
+    background-color: #1d6154;
+    color: white;
+    font-family: Syne;
+    font-weight: 700;
+    font-size: 14px;
+}
+
+#submitForm{
+    display: none;
+}
+
+.fleche{
+    display: none;
+}
+

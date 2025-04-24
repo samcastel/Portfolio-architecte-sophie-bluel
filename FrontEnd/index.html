@@ -10,7 +10,9 @@
 	<meta name="description" content="">
 	<link rel="stylesheet" href="./assets/style.css">
 	<link rel="stylesheet" href="galerie.css">
+	<link rel="stylesheet" href="modal.css">
 	<script src="script.js" defer></script>
+	<script src="modal.js" defer></script>
 </head>
 <body>
 <header>
@@ -19,7 +21,8 @@
 		<ul>
 			<li><a href="#portfolio">projets</a></li>
 			<li><a href="#contact">contact</a></li>
-			<li><a href="index-login.html">login</a></li>
+			<li id="login"><a href="index-login.html">login</a></li>
+			<li id="logout">logout</li>
 			<li><img src="./assets/icons/instagram.png" alt="Instagram"></li>
 		</ul>
 	</nav>
@@ -31,12 +34,61 @@
 		</figure>
 		<article>
 			<h2>Designer d'espace</h2>
-			<p>Je raconte votre histoire, je valorise vos idées. Je vous accompagne de la conception à la livraison finale du chantier.</p>
-			<p>Chaque projet sera étudié en commun, de façon à mettre en valeur les volumes, les matières et les couleurs dans le respect de l’esprit des lieux et le choix adapté des matériaux. Le suivi du chantier sera assuré dans le souci du détail, le respect du planning et du budget.</p>
-			<p>En cas de besoin, une équipe pluridisciplinaire peut-être constituée : architecte DPLG, décorateur(trice)</p>
+			<div class="presentation">
+				<p>Je raconte votre histoire, je valorise vos idées. Je vous accompagne de la conception à la livraison finale du chantier.</p>
+				<p>Chaque projet sera étudié en commun, de façon à mettre en valeur les volumes, les matières et les couleurs dans le respect de l’esprit des lieux et le choix adapté des matériaux. Le suivi du chantier sera assuré dans le souci du détail, le respect du planning et du budget.</p>
+				<p>En cas de besoin, une équipe pluridisciplinaire peut-être constituée : architecte DPLG, décorateur(trice)</p>
+			</div>
 		</article>
 		
 	</section>
+	
+	<div class="overlay">
+		<div class="modal">
+			<div class="modal__header">
+				<button class="fleche">
+					<img src="assets/icons/Vector.png" alt="fleche-retour">
+				</button>
+				<button class="quitter">
+					<img src="assets/icons/xmark.svg" alt="croix-quitter">
+				</button>
+			</div>
+			<div class="modal__title">
+				Galerie photo
+			</div>
+			<div class="modal__content">
+				<div class="galerie__container"></div>
+				<div class="addphoto__formulaire">
+					<div class="titre">
+						<p>Ajout photo</p>
+					</div>
+					<div class="add-pic">
+						<img src="Vector (1).png" alt="">
+						<button>+ Ajouter photo</button>
+						<p>jpg, png : 4mo max</p>
+					</div>
+					<div class="categorie">
+						<div>
+							<label for="">Titre</label>
+							<input type="text">
+						</div>
+						<div>
+							<label>Catégorie</label>
+							<select id="cat">
+		
+							</select>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="modal__action">
+				<hr>
+			    <button id="submitForm">Valider</button>
+				<button id="ajoutPhoto">Ajouter une photo</button>
+			</div>
+		</div>
+	</div>
+
 	<div class="galerie">
 		<div class="quitter">
 			<img src="assets/icons/xmark.svg" alt="croix-quitter">
@@ -44,28 +96,68 @@
 		<div class="titre">
 			<p>Galerie photo</p>
 		</div>
-		<div class="photo"></div>
+		<div class="choix__photos"></div>
+		<div class="galerie__container"></div>
+		
 		<hr>
 		<button id="bouton-ajout">Ajouter une photo</button>
 	</div>
 	<div class="addphoto">
-		<div class="fleche">
-			<img src="assets/icons/Vector.png" alt="fleche-retour">
+		<div class="addphoto__header">
+			<div class="fleche">
+				<img src="assets/icons/Vector.png" alt="fleche-retour">
+			</div>
+			<div class="quitter2">
+				<img src="assets/icons/xmark.svg" alt="croix-quitter">
+			</div>	
 		</div>
-		<div class="quitter2">
-			<img src="assets/icons/xmark.svg" alt="croix-quitter">
+
+		<div class="addphoto__formulaire">
+			<div class="titre">
+				<p>Ajout photo</p>
+			</div>
+			<div class="add-pic">
+				<img src="Vector (1).png" alt="">
+				<button>+ Ajouter photo</button>
+				<p>jpg, png : 4mo max</p>
+			</div>
+			<div class="categorie">
+				<div>
+					<label for="">Titre</label>
+					<input type="text">
+				</div>
+				<div>
+					<label>Catégorie</label>
+					<select id="cat">
+
+					</select>
+				</div>
+
+			<hr>
+			<button>Valider</button>
+			</div>
+		
 		</div>
-		<div class="titre">
-			<p>Ajout photo</p>
-		</div>
-		<div class="photo"></div>
-		<hr>
-		<button>Valider</button>
 	</div>
+
 	<section id="portfolio">
-		<h2>Mes Projets</h2>
+		<div class="my-projects">
+			<h2>Mes Projets</h2>
+			<div id="boutonModifier">
+				<img src="Group (1).png" alt="">
+				<span>modifier</span>
+			</div>
+		</div>
+		
+
+		<div class="selection-projet">
+			<button id="but1">Tous</button>
+			<button id="but2">Objets</button>
+			<button id="but3">Appartements</button>
+			<button id="but4">Hotels & restaurants</button>
+		</div>
 		<div class="gallery">
-			<figure>
+			<!-- <figure>
 				<img src="assets/images/abajour-tahina.png" alt="Abajour Tahina">
 				<figcaption>Abajour Tahina</figcaption>
 			</figure>
@@ -108,7 +200,7 @@
 			<figure>
 				<img src="assets/images/hotel-first-arte-new-delhi.png" alt="Hotel First Arte - New Delhi">
 				<figcaption>Hotel First Arte - New Delhi</figcaption>
-			</figure>
+			</figure> -->
 		</div>
 	</section>
 	<section id="contact">
@@ -133,9 +225,9 @@
 		</ul>
 	</nav>
 </footer>
-<p>Galerie photo</p>
+<!-- <p>Galerie photo</p> -->
 <div class=""></div>
-<hr>
-<button id="ajoutPhoto">Ajouter une photo</button>
+<!-- <hr> -->
+<!-- <button id="ajoutPhoto">Ajouter une photo</button> -->
 </body>
 </html>

@@ -1,43 +1,38 @@
 .galerie{
     display: none;
+
 }
 
 .addphoto{
     display: none;
+    
+    padding-left: 20px;
+    padding-right: 20px;
 }
 
 
-.galerie, .addphoto{
-    flex-direction: column;
-    align-items: center;
-    z-index: 20;
-    position: fixed;
-    background-color: white;
-    border-radius: 10px;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
-}
 
-.titre{
-    text-align: center;
-}
 
-.quitter{
-    text-align: right;
+
+
+
+.addphoto__header{
+    display: flex;
+    justify-content: space-between;
     width: 100%;
-    margin-right: 10px;
+    margin-top: 26px;
 }
+
+
+
+
 
 .quitter2{
     text-align: right;
     width: 100%;
 }
 
-.fleche{
-    text-align: left;
-    width: 100%;
-}
+
 
 
 
@@ -65,13 +60,127 @@ p{
     font-size: 26px;
 }
 
-button{
-    width: 237px;
-    height: 36px;
+
+
+
+
+
+.deleteButton img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.deleteButton{
+    width: 17px;
+    height: 17px;
+    background-color: transparent;
+    border: none;
+    padding: 0;
+    position: absolute;
+    margin-top: 5px;
+    margin-left: -22px;
+}
+
+.selection-projet{
+    width: 585px;
+    height: 38px;
+    margin: auto;
+    margin-bottom: 51px;
+    margin-top: 50px;
+}
+
+.selection-projet button{
+    background-color: #FFFFFF;
+    color: #1D6154;
+    font-size: 16px;
+    height: 37px;
     border-radius: 60px;
-    background-color: #1d6154;
-    color: white;
-    font-family: Syne;
-    font-weight: 700;
+    border: 1px solid #10332d;
+    cursor: pointer;
+}
+
+#but1,#but2{
+    width: 100px;
+}
+
+#but3{
+    width: 157px;
+}
+
+#but4{
+    width: 198px;
+}
+
+#but2,#but3,#but4{
+    margin-left: 5px;
+}
+
+
+.selection-projet button:hover{
+    background-color: #10332d;
+    color: #FFFFFF;
+}
+.selection-projet button:active{
+    background-color: #60a396;
+    color: #FFFFFF;
+}
+
+
+
+.presentation{
+    width: 404px;
+    height: 192px;
+}
+
+.presentation p{
     font-size: 14px;
 }
+
+#login{
+    display: inline;
+}
+
+#logout{
+    display: none;
+    cursor: pointer;
+}
+
+.my-projects{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+
+}
+
+.my-projects img{
+    object-fit: contain;
+}
+
+.my-projects p{
+    font-size: 14px;
+}
+
+.my-projects h2{
+    margin: 0 !important;
+    margin-block-end: 0 !important;
+}
+
+button img{
+    /* position: absolute; */
+    width: 100%;
+    
+}
+
+
+
+
+
+
+/* Faire page spécifique pour la modal */
+/* Réorganiser le code. Variables claires. Style modal + js modal. */
+
+/* .selection-projet{
+    display: inline;
+} */
