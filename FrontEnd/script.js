@@ -66,6 +66,64 @@ retour.addEventListener("click", () => {addphoto.style.display="none", galerie.s
 
 
 
+// const actualiserGalerie = () => {
+// fetch("http://localhost:5678/api/works").then((reponse)=>{
+//   if (reponse.ok){
+//     return reponse.json()
+//   } else{
+//     throw new Error(reponse.status)
+//   }
+// }).then((data)=>{
+//   console.log(data);
+//   let modalContainer = document.querySelector(".galerie__container");
+//   let galerie = document.querySelector(".gallery");
+//   galerie.innerHTML = "";
+//   modalContainer.innerHTML = "";
+//   for(let i = 0; i<data.length; i++){
+//     const galleryItem = buildGalleryItem(data[i]);
+//     galerie.appendChild(galleryItem); 
+//     const modalGalleryItem = buildModalPict(data[i]);
+//     modalContainer.appendChild(modalGalleryItem);
+//   }
+// }).catch((e) => {
+//   if (e = 404){
+//     alert("La donnée n'a pas été trouvée");
+//   }
+//   else{
+    
+//   }
+//   console.log(e);
+//   alert("Une erreur s'est produite veuillez rafraichir la page");
+// })
+// }
+
+let boutTous = document.getElementById("but1");
+let boutObjets = document.getElementById("but2");
+let boutAppartements = document.getElementById("but3");
+let boutHotels = document.getElementById("but4");
+
+let projets = [];
+
+boutTous.addEventListener("click", () => {console.log("bouton 1"); showGalerie(projets, "tous")})
+boutObjets.addEventListener("click", () => {console.log("bouton 2"); showGalerie(projets, 1)})
+boutAppartements.addEventListener("click", () => {console.log("bouton 3"); showGalerie(projets, 2)} )
+boutHotels.addEventListener("click", () => {console.log("bouton 4"); showGalerie(projets, 3)} )
+
+const showGalerie = (data,categorie) => {
+  let modalContainer = document.querySelector(".galerie__container");
+  let galerie = document.querySelector(".gallery");
+  galerie.innerHTML = "";
+  modalContainer.innerHTML = "";
+  for(let i = 0; i<data.length; i++){
+    if(data[i].category.id === categorie || categorie === "tous"){
+    const galleryItem = buildGalleryItem(data[i]);
+    galerie.appendChild(galleryItem); 
+    const modalGalleryItem = buildModalPict(data[i]);
+    modalContainer.appendChild(modalGalleryItem);
+    }
+  }
+}
+
 const actualiserGalerie = () => {
 fetch("http://localhost:5678/api/works").then((reponse)=>{
   if (reponse.ok){
@@ -75,16 +133,9 @@ fetch("http://localhost:5678/api/works").then((reponse)=>{
   }
 }).then((data)=>{
   console.log(data);
-  let modalContainer = document.querySelector(".galerie__container");
-  let galerie = document.querySelector(".gallery");
-  galerie.innerHTML = "";
-  modalContainer.innerHTML = "";
-  for(let i = 0; i<data.length; i++){
-    const galleryItem = buildGalleryItem(data[i]);
-    galerie.appendChild(galleryItem); 
-    const modalGalleryItem = buildModalPict(data[i]);
-    modalContainer.appendChild(modalGalleryItem);
-  }
+  projets = data;
+  showGalerie(data,"tous");
+
 }).catch((e) => {
   if (e = 404){
     alert("La donnée n'a pas été trouvée");
@@ -153,26 +204,26 @@ const deleteWork = (e) => {
   });
 }
 
-fetch("http://localhost:5678/api/categories").then((reponse1)=>{
-  if (reponse1.ok){
-    return reponse1.json()
-  } else{
-    throw new Error();
-  }
-}).then((data)=>{
-  console.log(data);
-  console.log(data.length);
-  let boutTous = document.getElementById("but1");
-  let boutObjets = document.getElementById("but2");
-  let boutAppartements = document.getElementById("but3");
-  let boutHotels = document.getElementById("but4");
+// fetch("http://localhost:5678/api/categories").then((reponse1)=>{
+//   if (reponse1.ok){
+//     return reponse1.json()
+//   } else{
+//     throw new Error();
+//   }
+// }).then((data)=>{
+//   console.log(data);
+//   console.log(data.length);
+//   let boutTous = document.getElementById("but1");
+//   let boutObjets = document.getElementById("but2");
+//   let boutAppartements = document.getElementById("but3");
+//   let boutHotels = document.getElementById("but4");
     
-  boutTous.addEventListener("click", () => {console.log(reponse1)} )
-  boutObjets.addEventListener("click", () => {console.log(reponse1)} )
-  boutAppartements.addEventListener("click", () => {console.log(reponse1)} )
-  boutHotels.addEventListener("click", () => {console.log(reponse1)} )
-  //fonction filter ?
-})
+//   boutTous.addEventListener("click", () => {console.log("bouton 1")} )
+//   boutObjets.addEventListener("click", () => {console.log("bouton 2")} )
+//   boutAppartements.addEventListener("click", () => {console.log("bouton 3")} )
+//   boutHotels.addEventListener("click", () => {console.log("bouton 4")} )
+//   //fonction filter ?
+// })
 
 
 

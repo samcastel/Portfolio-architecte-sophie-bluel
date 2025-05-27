@@ -59,21 +59,25 @@
 			<div class="modal__content">
 				<div class="galerie__container"></div>
 				<div class="addphoto__formulaire">
-					<div class="titre">
+					<!-- <div class="titre">
 						<p>Ajout photo</p>
-					</div>
+					</div> -->
 					<div class="add-pic">
-						<img src="Vector (1).png" alt="">
-						<button>+ Ajouter photo</button>
-						<p>jpg, png : 4mo max</p>
+						<div class="add-pic-containt">
+							<img src="Vector (1).png" alt="">
+							<button id="filebutton">+ Ajouter photo</button>
+							<input type="file" accept="image/*" hidden id="file">
+							<p>jpg, png : 4mo max</p>
+						</div>
+						<img src="" alt="" id="fileImage">
 					</div>
 					<div class="categorie">
 						<div>
-							<label for="">Titre</label>
-							<input type="text">
+							<label for="titre">Titre</label>
+							<input type="text" id="titre">
 						</div>
 						<div>
-							<label>Catégorie</label>
+							<label for="cat">Catégorie</label>
 							<select id="cat">
 		
 							</select>
