@@ -141,10 +141,10 @@ fetch("http://localhost:5678/api/works").then((reponse)=>{
     alert("La donnée n'a pas été trouvée");
   }
   else{
-    
-  }
-  console.log(e);
+    console.log(e);
   alert("Une erreur s'est produite veuillez rafraichir la page");
+  }
+  
 })
 }
 
@@ -197,6 +197,7 @@ const deleteWork = (e) => {
   fetch("http://localhost:5678/api/works/" + e.target.parentElement.dataset.id, 
     {method:"delete", headers: {Authorization:"bearer " + token}}
   ).then(() => {
+    // Vérifier que la réponse est ok
     actualiserGalerie();
   }).catch((e) => {
     console.error(e);
