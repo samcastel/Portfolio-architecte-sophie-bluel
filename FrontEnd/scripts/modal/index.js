@@ -1,5 +1,4 @@
 // Form elements
-
 const form_addPict = document.querySelector(".add-pic-containt");
 const form_titre = document.querySelector("#titre");
 const form_selectCategory = document.querySelector("#cat");
@@ -30,7 +29,6 @@ boutonModifier.addEventListener("click", () => {
 
 
 /* Fermeture de la modale */
-
 const fermerModal = () => {
     overlay.style.display="none";
     document.body.style.overflow = "auto";
@@ -57,7 +55,6 @@ modal.addEventListener("click", (e) => {
 
 
 /* Navigation dans la modale */
-
 const afficherGalerie = () => {
     photoFormulaire.style.display = "none";
     galleryContent.style.display = "flex";

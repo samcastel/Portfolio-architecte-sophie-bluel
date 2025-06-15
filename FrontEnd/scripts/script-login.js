@@ -26,37 +26,4 @@ form.addEventListener("submit", (event) => {
       }).catch((e)=>{
         console.error(e);
       })
-    // Chercher email et mdp entrés
-    // Faire un fetch vers la route du login en envoyant les param email et mdp
 })
-
-
-
-
-
-
-    // else if(motDePasse.value.trim() == ""){
-    //     alert("Entrez un mot de passe valide");
-    //}
-
-
-// Utiliser Postman. Si pas bon mdp ou email => 401 sinon => 200
-
-/*const authentification = async(req,res,next) => {
-    try{
-
-
-        next();
-    }
-
-    catch(){
-        res.status(401)("Entrez vos codes d'accès")
-    }
-}*/
-
-//local storage
-
-
-
-
-

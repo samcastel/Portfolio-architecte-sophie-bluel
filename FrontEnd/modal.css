@@ -54,12 +54,6 @@
 }
 
 
-
-/* .layout{
-    width: 100%;
-    background-color: #0000004D
-} */
-
 .fleche{
     text-align: left;
     width: 100%;
@@ -99,14 +93,10 @@
     padding-left: 85px;
     padding-right: 85px;
     display: none;
-    /* justify-content: center; */
     flex-direction: column;
     align-items: center;
 }
 
-/* .titre{
-    text-align: center;
-} */
 .modal__title{
     text-align: center;
     font-size: 26px;
@@ -117,12 +107,11 @@
     width: 420px;
     height: 156px;
     background-color: #E8F1F6;
-    padding-top: 13px;
-    /*padding-bottom: 19px;*/
     margin-top: 36px;
     margin-bottom: 56px;
     border-radius: 3px;
 }
+
 
 .add-pic-containt{
     display: flex;
@@ -131,6 +120,7 @@
     justify-content: space-between;
     gap: 7px;
     margin-top: 8px;
+    padding-top: 13px;
 }
 
 .add-pic p{
@@ -207,8 +197,6 @@
     align-items: center;
 }
 
-
-
 .modal__action button{
     width: 237px;
     height: 36px;
@@ -222,7 +210,6 @@
 
 #submitForm{
     display: none;
-    /*margin-top: 20px;*/
     background-color: #a7a7a7;
     border: none;
 }
@@ -234,14 +221,15 @@
 }
 
 hr{
-    margin-top: 50px;
-    margin-bottom: 50px;
+    margin-top: 40px;
+    margin-bottom: 40px;
 }
 
 #fileImage{
     display: none;
-    width: 100%;
-    max-height: 300px;
+    margin: auto;
+    max-width: 100%;
+    max-height: 100%;
 }
 
 #ajoutPhoto{

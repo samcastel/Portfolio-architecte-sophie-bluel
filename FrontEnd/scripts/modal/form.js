@@ -16,7 +16,6 @@ const checkForm = () => {
 }
 
 // Gestion inputs formulaire ajout photo
-
 form_selectCategory.addEventListener("change", checkForm);
 
 form_titre.addEventListener("change", checkForm);
