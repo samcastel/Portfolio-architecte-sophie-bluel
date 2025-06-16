@@ -17,6 +17,7 @@ form.addEventListener("submit", (event) => {
           return reponse2.json()
         } else{
             console.error("email ou mdp invalide");
+            /*div html erreur*/
         }
       }).then((reponse2)=>{
         if(reponse2){
@@ -25,5 +26,6 @@ form.addEventListener("submit", (event) => {
         window.location.href = "index.html"}
       }).catch((e)=>{
         console.error(e);
+        /*div html erreur de connexion ou une erreur s'est produite veuillez reessayer*/
       })
 })

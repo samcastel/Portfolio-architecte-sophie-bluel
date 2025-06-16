@@ -2,7 +2,7 @@
 // overflow hidden
 
 
-const token = localStorage.getItem("token");            
+let token = localStorage.getItem("token");            
 const login = document.getElementById("login");
 const logout = document.getElementById("logout");
 
@@ -65,7 +65,6 @@ fetch("http://localhost:5678/api/works").then((reponse)=>{
     throw new Error(reponse.status)
   }
 }).then((data)=>{
-  console.log(data);
   projets = data;
   showGalerie(data,"tous");
 
@@ -136,24 +135,4 @@ const deleteWork = (e) => {
     alert("Erreur suppression du projet");
   });
 }
-
-fetch("http://localhost:5678/api/works", {
-  method:"post", 
-  headers:{
-    "Content-Type":"application/json",
-    "Authorization":"Bearer " + localStorage.getItem("token")
-  },
-  body:JSON.stringify({
-    "email": "sophie.bluel@test.tld",
-  "password": "S0phie"
-  })
-}).then((reponse2)=>{
-  if (reponse2.ok){
-    return reponse2.json()
-  }
-}).then((reponse2)=>{
-  console.log(reponse2);
-  console.log("hello"); 
-})
-
 
