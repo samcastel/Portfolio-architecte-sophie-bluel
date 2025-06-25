@@ -30,7 +30,6 @@ form.addEventListener("submit", (event) => {
         window.location.href = "index.html"}
       }).catch((e)=>{
         console.error(e);
-        /*div html erreur de connexion ou une erreur s'est produite veuillez reessayer*/
         loginError.style.display = "block";
         loginError.innerHTML = "Une erreur de connexion s'est produite";
       })
