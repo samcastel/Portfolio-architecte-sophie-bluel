@@ -44,13 +44,19 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    height: 402px;
+    min-height: 402px;
+    max-height: 402px;
     
 }
 
 .galerie__container{
-    margin-top: 100px;
+    margin-top: 47px;
     margin-left: 80px;
     margin-right: 80px;
+    max-height: calc(100% - 47px);
+    height: calc(100% - 47px);
+    overflow: auto;
 }
 
 
@@ -81,6 +87,7 @@
 .galerie__container figure{
     width: 78px;
     height: 105px;
+    position: relative;
 }
 
 .galerie__container img{

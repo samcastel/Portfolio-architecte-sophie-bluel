@@ -11,6 +11,12 @@ nav img{
     height: 22px;
 }
 
+.mask{
+    width: 777px;
+    height: 88px;
+    display: none;
+}
+
 
 #boutonModifier:hover, header a:hover, nav img:hover{
     color: rgb(177, 102, 60);
@@ -85,6 +91,7 @@ p{
     margin: auto;
     margin-bottom: 51px;
     margin-top: 50px;
+    display: block;
 }
 
 .selection-projet button{

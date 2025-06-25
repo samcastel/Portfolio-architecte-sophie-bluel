@@ -3,6 +3,9 @@ form.addEventListener("submit", (event) => {
     event.preventDefault();
     let email = document.getElementById("mail");
     let motDePasse = document.getElementById("mdp");
+    const loginError = document.querySelector(".login-error");
+    loginError.style.display = "none";
+    
     fetch("http://localhost:5678/api/users/login", {
         method:"post", 
         headers:{
@@ -17,7 +20,8 @@ form.addEventListener("submit", (event) => {
           return reponse2.json()
         } else{
             console.error("email ou mdp invalide");
-            /*div html erreur*/
+            loginError.style.display = "block";
+            loginError.innerHTML = "E-mail ou mot de passe invalide";
         }
       }).then((reponse2)=>{
         if(reponse2){
@@ -27,5 +31,7 @@ form.addEventListener("submit", (event) => {
       }).catch((e)=>{
         console.error(e);
         /*div html erreur de connexion ou une erreur s'est produite veuillez reessayer*/
+        loginError.style.display = "block";
+        loginError.innerHTML = "Une erreur de connexion s'est produite";
       })
 })

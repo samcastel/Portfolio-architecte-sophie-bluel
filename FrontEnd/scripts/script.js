@@ -16,6 +16,8 @@ let boutTous = document.getElementById("but1");
 let boutObjets = document.getElementById("but2");
 let boutAppartements = document.getElementById("but3");
 let boutHotels = document.getElementById("but4");
+let mask = document.querySelector(".mask");
+let selectionProjet = document.querySelector(".selection-projet");
 
 let projets = [];
 
@@ -31,12 +33,16 @@ const initialisation = () => {
     boutonModifier.style.display = "block";
     login.style.display = "none",
     logout.style.display = "inline"
+    selectionProjet.style.display = "none";
+    mask.style.display = "block";
   }
   else{
     modeEditionContainer.style.display = "none";
     boutonModifier.style.display = "none";
     login.style.display = "inline";
     logout.style.display = "none";
+    selectionProjet.style.display = "block";
+    mask.style.display = "none";
   }
 }
 
