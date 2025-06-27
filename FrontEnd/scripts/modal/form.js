@@ -2,7 +2,7 @@ const fileButton = document.querySelector("#filebutton");
 /* ajout photo */
 
 
-// Function qui vérifie si le formulaire est complet ou non.
+// Fonction qui vérifie si le formulaire est complet ou non.
 const checkForm = () => {
     
     if(form_titre.value !== "" && form_selectCategory.value !== "" && form_inputFile.files.length > 0){
