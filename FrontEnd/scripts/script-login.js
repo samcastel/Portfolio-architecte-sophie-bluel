@@ -19,18 +19,15 @@ form.addEventListener("submit", (event) => {
         if (reponse2.ok){
           return reponse2.json()
         } else{
-            console.error("email ou mdp invalide");
             loginError.style.display = "block";
             loginError.innerHTML = "E-mail ou mot de passe invalide";
         }
       }).then((reponse2)=>{
         if(reponse2){
-        console.log(reponse2);
         localStorage.setItem("token", reponse2.token);
         window.location.href = "index.html"}
       }).catch((e)=>{
-        console.error(e);
         loginError.style.display = "block";
         loginError.innerHTML = "Une erreur de connexion s'est produite";
-      })
+      })  
 })
